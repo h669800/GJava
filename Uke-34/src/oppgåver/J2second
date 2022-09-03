@@ -1,0 +1,21 @@
+package oppgåver;
+
+import static javax.swing.JOptionPane.*;
+import static java.lang.Integer.*;
+
+public class J2second {
+
+	public static void main(String[] args) {
+		int maxnum = parseInt(showInputDialog("How many numbers do you want to enter?"));
+    
+		if (maxnum <= 1) System.exit(0); // Exits program if there are 1 or less numbers
+
+		   for (int num = parseInt(showInputDialog("Enter a number")); maxnum != 1; maxnum --) {
+			    num =  Math.min(num, parseInt(showInputDialog("Enter another number:")));
+			       if (maxnum == 2) showMessageDialog(null, num); // Prints out the minimum number once the for loop finish
+		   }
+
+    
+	}
+
+}
