@@ -4,11 +4,11 @@ import static javax.swing.JOptionPane.*;
 import static java.lang.Integer.*;
 public class J3dato {
 		public static boolean isValid (String s, int minLength, int maxLength, int maxValue) {
-		char[] characters = s.toCharArray(); // create an array of each character in the string s.
+		char[] s_characters = s.toCharArray(); // create an array of each character in the string s.
 
-		      for (int i = s.length() - 1; i != -1; i--) {// The for loop runs once for each character in the string. (ex: if string is "Hello", it runs 5 times.)
-				   if (Character.isDigit(s.toCharArray()[i]) == false) return false; // If any character in the string is not a number, return false. (String Hello12 returns false)
-		      }
+		   for ( int i = s.length() - 1; i != -1; i-- ) { // The for loop runs once for each character in the string. (ex: if string is "Hello", it runs 5 times.)
+		      if ( Character.isDigit(  s_characters[i]  ) == false ) return false; // If any character in the string is not a number, return false. (String Hello12 returns false)
+		   }
 		   if (parseInt(s) < 1 || parseInt(s) > maxValue)  return false;// If too high value, return false. (ex: The 38th day of the month = false)
 		   if (s.length() < minLength || s.length() > maxLength) return false; // if too many/few characters, return false. (ex: The 114th month = false)
 		   
@@ -17,9 +17,7 @@ public class J3dato {
 	
 	public static String zeroes (String st, int maxLength) {
 		
-		while (maxLength != st.length()) // While the max length of the String is not equal to the actual strings length:
-		st = "0" + st; // Add a zero behind the String/number (ex: 1 becomes 0001 if the maxlength is 4)
-		
+		while (maxLength != st.length())    st = "0" + st; // Add a zero behind the String/number (ex: 1 becomes 0001 if the maxlength is 4)
 		return st; // returns the string, so zeroes(String, maxLength) = st.
 	}
 	public static void main(String[] args) {
