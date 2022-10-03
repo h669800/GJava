@@ -6,8 +6,9 @@ import java.text.DecimalFormat;
 
 public class B1 {
  // driver code
- public static void main(String args[])
- {
+
+ public static void main(String args[]) {
+
 	 ArrayList<Double> deg = new ArrayList<Double>();
 	 ArrayList<Double> radian = new ArrayList<Double>();
 	 ArrayList<Double> sin = new ArrayList<Double>();
@@ -22,7 +23,7 @@ public class B1 {
 
 
 	 
-	 System.out.println("x i grader    x i radianer    sin(x)       cos(x)");
+	 System.out.println("x in degrees    x in radians    sin(x)       cos(x)");
 	 System.out.println("--------------------------------------------------------------------------------------------");
 	 liste(deg, radian, sin, cos);
 	 System.out.println("--------------------------------------------------------------------------------------------");

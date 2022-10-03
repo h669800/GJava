@@ -31,7 +31,7 @@ public class B2 {
 	
 	private static boolean isValid(String input) {
 		
-		if (input == null) System.exit(0);
+		if (input == null) System.exit(0); // lukker programmet om du trykk cancel
 		
 		   for (int i = input.length() - 1; i != -1; i--) {
 			 	  // Run once for each character in string
